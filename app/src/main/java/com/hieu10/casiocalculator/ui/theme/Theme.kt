@@ -1,6 +1,5 @@
 package com.hieu10.casiocalculator.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -12,25 +11,31 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = DarkPrimary,
+    secondary = DarkSecondary,
+    tertiary = DarkTertiary,
+    error = DarkError,
+    background = DarkBackground,
+    surface = DarkSurface,
+    onPrimary = DarkOnPrimary,
+    onSecondary = DarkOnPrimary,
+    onTertiary = DarkOnBackground,
+    onBackground = DarkOnBackground,
+    onSurface = DarkOnSurface
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
-
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+    primary = LightPrimary,
+    secondary = LightSecondary,
+    tertiary = LightTertiary,
+    error = LightError,
+    background = LightBackground,
+    surface = LightSurface,
+    onPrimary = LightOnPrimary,
+    onSecondary = LightOnPrimary,
+    onTertiary = LightOnBackground,
+    onBackground = LightOnBackground,
+    onSurface = LightOnSurface
 )
 
 @Composable
@@ -52,7 +57,8 @@ fun CasioCalculatorTheme(
 
     MaterialTheme(
         colorScheme = colorScheme,
-        typography = Typography,
+        typography = AppTypography,
+        shapes = AppShapes,
         content = content
     )
 }
